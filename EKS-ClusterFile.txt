@@ -1,0 +1,82 @@
+=====================
+
+EKS
+
+=============================
+Step-1
+EC2:VM--Created
+AWS CLI---
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+Step-2
+Docker Install
+
+Step3#----AWS--EKS--Cluster--DemoCluster--Created---V.21 ( EKS-Cluster Role-1)
+
+Step4
+Kubectl:( V--21)
+https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+
+Step5
+Connect Kubectl to cluster
+
+aws eks --region us-east-2 describe-cluster --name CVHYDCLUSTER-1 --query cluster.status
+aws eks --region us-east-2 update-kubeconfig --name CVHYDCLUSTER-1
+
+Step6:
+Create WorkNode:(2 0r 4 0r 6)
+
+Create IAM Role: (NG--Role-2)
+
+AmazonEKS_CNI_Policy
+AmazonEKSWorkerNodePolicy
+AmazonEC2ContainerRegistryReadOnly
+
+Verification Commands in VM
+
+kubectl get svc
+kubectl get nodes --watch
+kubectl get nodes
+
+MAster Node
+WorkNode
+
+Deploy Sample App: examples
+1.
+Git Hub: https://github.com/alishaukat718/kubernetes_javahometech/tree/master/pods
+
+2.https://docs.aws.amazon.com/eks/latest/userguide/sample-deployment.html
+
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
